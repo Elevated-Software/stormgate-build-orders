@@ -11,9 +11,6 @@ dependencies:
   '@nextui-org/card':
     specifier: ^2.0.20
     version: 2.0.20(framer-motion@10.16.2)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.3.3)
-  '@nextui-org/code':
-    specifier: 2.0.16
-    version: 2.0.16(react@18.2.0)(tailwindcss@3.3.3)
   '@nextui-org/input':
     specifier: 2.1.6
     version: 2.1.6(@types/react@18.2.21)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.3.3)
@@ -26,9 +23,6 @@ dependencies:
   '@nextui-org/navbar':
     specifier: 2.0.19
     version: 2.0.19(@types/react@18.2.21)(framer-motion@10.16.2)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.3.3)
-  '@nextui-org/snippet':
-    specifier: 2.0.22
-    version: 2.0.22(framer-motion@10.16.2)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.3.3)
   '@nextui-org/switch':
     specifier: 2.0.18
     version: 2.0.18(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.3.3)
@@ -366,22 +360,6 @@ packages:
     dev: false
     optional: true
 
-  /@nextui-org/aria-utils@2.0.7(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.3.3):
-    resolution: {integrity: sha512-Z5/JvPNyn96nW6qBMbGfPeplV9BXCKOPMFimVCVlqi6foeh2X4LqGifXpDa0szZli+Y1BFhGgIbpBAaQTzLS1A==}
-    peerDependencies:
-      react: '>=18'
-    dependencies:
-      '@nextui-org/system': 2.0.7(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.3.3)
-      '@react-aria/utils': 3.20.0(react@18.2.0)
-      '@react-stately/collections': 3.10.1(react@18.2.0)
-      '@react-types/overlays': 3.8.2(react@18.2.0)
-      '@react-types/shared': 3.20.0(react@18.2.0)
-      react: 18.2.0
-    transitivePeerDependencies:
-      - react-dom
-      - tailwindcss
-    dev: false
-
   /@nextui-org/button@2.0.18(framer-motion@10.16.2)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.3.3):
     resolution: {integrity: sha512-XFgW7FQRlh1sVt3J2UKxvZxGHCPaK7wwzBLh3moRwPoJ16PjRYV4S9ijvW8tDl8/pvmXmCDjACFllZ7U39bUJQ==}
     peerDependencies:
@@ -427,20 +405,6 @@ packages:
     transitivePeerDependencies:
       - framer-motion
       - react-dom
-      - tailwindcss
-    dev: false
-
-  /@nextui-org/code@2.0.16(react@18.2.0)(tailwindcss@3.3.3):
-    resolution: {integrity: sha512-V6sLz/kkIrvMEc/3myIuJabPpRjCjODgsz/ejjtC/yIVuP6GFHInyCT2fAlGXCnWP+0e9rvo+hpINDtGeC4pEg==}
-    peerDependencies:
-      react: '>=18'
-    dependencies:
-      '@nextui-org/react-utils': 2.0.7(react@18.2.0)
-      '@nextui-org/shared-utils': 2.0.2(react@18.2.0)
-      '@nextui-org/system-rsc': 2.0.4(react@18.2.0)(tailwindcss@3.3.3)
-      '@nextui-org/theme': 2.1.6(tailwindcss@3.3.3)
-      react: 18.2.0
-    transitivePeerDependencies:
       - tailwindcss
     dev: false
 
@@ -634,29 +598,6 @@ packages:
       react: 18.2.0
     dev: false
 
-  /@nextui-org/snippet@2.0.22(framer-motion@10.16.2)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.3.3):
-    resolution: {integrity: sha512-606bo8T4qaToxqiECNGyN/ZyLUkRHngEXi4RpHttP4O3Ze64EHq7tlu0bF3DjyJv+2vWIiZrJvi8VzJsAmfVvA==}
-    peerDependencies:
-      framer-motion: '>=4.0.0'
-      react: '>=18'
-    dependencies:
-      '@nextui-org/button': 2.0.18(framer-motion@10.16.2)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.3.3)
-      '@nextui-org/react-utils': 2.0.7(react@18.2.0)
-      '@nextui-org/shared-icons': 2.0.3(react@18.2.0)
-      '@nextui-org/shared-utils': 2.0.2(react@18.2.0)
-      '@nextui-org/system': 2.0.7(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.3.3)
-      '@nextui-org/theme': 2.1.6(tailwindcss@3.3.3)
-      '@nextui-org/tooltip': 2.0.21(framer-motion@10.16.2)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.3.3)
-      '@nextui-org/use-clipboard': 2.0.2(react@18.2.0)
-      '@react-aria/focus': 3.14.1(react@18.2.0)
-      '@react-aria/utils': 3.20.0(react@18.2.0)
-      framer-motion: 10.16.2(react-dom@18.2.0)(react@18.2.0)
-      react: 18.2.0
-    transitivePeerDependencies:
-      - react-dom
-      - tailwindcss
-    dev: false
-
   /@nextui-org/spinner@2.0.16(react@18.2.0)(tailwindcss@3.3.3):
     resolution: {integrity: sha512-HqWrL8O6d4dqHVrJUriDlg+C5qCqnBKCCOW69JIS3dpkk4P4M47OgzAXL7fqv5MuU+1vvxCg/cRh0V9fPwjcag==}
     peerDependencies:
@@ -795,32 +736,6 @@ packages:
       tailwindcss: 3.3.3
     dev: false
 
-  /@nextui-org/tooltip@2.0.21(framer-motion@10.16.2)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.3.3):
-    resolution: {integrity: sha512-aW7wsYqvZR92KNwBwl/X1C6NZ0PffRietlrBlCY9R8KG6nomw2az8R7gaiPkBse4ifBzvm/SUFzo0QGRqv2i7Q==}
-    peerDependencies:
-      framer-motion: '>=4.0.0'
-      react: '>=18'
-    dependencies:
-      '@nextui-org/aria-utils': 2.0.7(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.3.3)
-      '@nextui-org/framer-transitions': 2.0.7(framer-motion@10.16.2)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.3.3)
-      '@nextui-org/react-utils': 2.0.7(react@18.2.0)
-      '@nextui-org/shared-utils': 2.0.2(react@18.2.0)
-      '@nextui-org/system': 2.0.7(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.3.3)
-      '@nextui-org/theme': 2.1.6(tailwindcss@3.3.3)
-      '@react-aria/interactions': 3.18.0(react@18.2.0)
-      '@react-aria/overlays': 3.17.0(react-dom@18.2.0)(react@18.2.0)
-      '@react-aria/tooltip': 3.6.2(react@18.2.0)
-      '@react-aria/utils': 3.20.0(react@18.2.0)
-      '@react-stately/tooltip': 3.4.4(react@18.2.0)
-      '@react-types/overlays': 3.8.2(react@18.2.0)
-      '@react-types/tooltip': 3.4.4(react@18.2.0)
-      framer-motion: 10.16.2(react-dom@18.2.0)(react@18.2.0)
-      react: 18.2.0
-    transitivePeerDependencies:
-      - react-dom
-      - tailwindcss
-    dev: false
-
   /@nextui-org/use-aria-button@2.0.3(react@18.2.0):
     resolution: {integrity: sha512-JdxOk12vXO/AVLwJ0Mnr9QTugLDnjOPfDoV/AtQVGxgU/7VAuyGVt2Gt5eXQM6eOm36UBia59eXlWzF/9Judjw==}
     peerDependencies:
@@ -870,14 +785,6 @@ packages:
       '@react-stately/toggle': 3.6.2(react@18.2.0)
       '@react-types/button': 3.8.0(react@18.2.0)
       '@react-types/shared': 3.20.0(react@18.2.0)
-      react: 18.2.0
-    dev: false
-
-  /@nextui-org/use-clipboard@2.0.2(react@18.2.0):
-    resolution: {integrity: sha512-Ass+LJR/cWC48AeIUtsukzvA7Mf5bV7ikdNUvuLyrc9pdqr1fmw4aHCkQPQKSjLIHy85KuXDKqrqhVoVLivD4g==}
-    peerDependencies:
-      react: '>=18'
-    dependencies:
       react: 18.2.0
     dev: false
 
@@ -1075,21 +982,6 @@ packages:
       react: 18.2.0
     dev: false
 
-  /@react-aria/tooltip@3.6.2(react@18.2.0):
-    resolution: {integrity: sha512-y8dAxRrL4lPmYrg+UoKbHymeIuOxBq994XXWbHw2dlM4ZnBfXAaFWYuV9Pfp+JXk9Oi1atJYc3O70Z9TmgXGVw==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
-    dependencies:
-      '@react-aria/focus': 3.14.1(react@18.2.0)
-      '@react-aria/interactions': 3.18.0(react@18.2.0)
-      '@react-aria/utils': 3.20.0(react@18.2.0)
-      '@react-stately/tooltip': 3.4.4(react@18.2.0)
-      '@react-types/shared': 3.20.0(react@18.2.0)
-      '@react-types/tooltip': 3.4.4(react@18.2.0)
-      '@swc/helpers': 0.5.2
-      react: 18.2.0
-    dev: false
-
   /@react-aria/utils@3.20.0(react@18.2.0):
     resolution: {integrity: sha512-TpvP9fw2/F0E+D05+S1og88dwvmVSLVB4lurVAodN1E6rCZyw+M/SHlCez0I7j1q9ZWAnVjRuHpBIRG5heX1Ug==}
     peerDependencies:
@@ -1129,16 +1021,6 @@ packages:
       react: 18.2.0
     dev: false
 
-  /@react-stately/collections@3.10.1(react@18.2.0):
-    resolution: {integrity: sha512-C9FPqoQUt7NeCmmP8uabQXapcExBOTA3PxlnUw+Nq3+eWH1gOi93XWXL26L8/3OQpkvAbUcyrTXhCybLk4uMAg==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
-    dependencies:
-      '@react-types/shared': 3.20.0(react@18.2.0)
-      '@swc/helpers': 0.5.2
-      react: 18.2.0
-    dev: false
-
   /@react-stately/overlays@3.6.2(react@18.2.0):
     resolution: {integrity: sha512-iIU/xtYEzG91abHFHqe8LL53ZrDDo8kblfdA7TTZwrtxZhQHU3AbT0pLc3BNe3sXmJspxuI1nS1cszcRlSuDww==}
     peerDependencies:
@@ -1158,18 +1040,6 @@ packages:
       '@react-stately/utils': 3.7.0(react@18.2.0)
       '@react-types/checkbox': 3.5.1(react@18.2.0)
       '@react-types/shared': 3.20.0(react@18.2.0)
-      '@swc/helpers': 0.5.2
-      react: 18.2.0
-    dev: false
-
-  /@react-stately/tooltip@3.4.4(react@18.2.0):
-    resolution: {integrity: sha512-Tb69T2uRep/9AF0+WR7j3kp4hZzRpp5N9r52j3zKsbHQ/qirAAQUJZegg5VgSfL2ncI7n2VijbBo8DfuJTbm8g==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
-    dependencies:
-      '@react-stately/overlays': 3.6.2(react@18.2.0)
-      '@react-stately/utils': 3.7.0(react@18.2.0)
-      '@react-types/tooltip': 3.4.4(react@18.2.0)
       '@swc/helpers': 0.5.2
       react: 18.2.0
     dev: false
@@ -1252,16 +1122,6 @@ packages:
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
     dependencies:
-      '@react-types/shared': 3.20.0(react@18.2.0)
-      react: 18.2.0
-    dev: false
-
-  /@react-types/tooltip@3.4.4(react@18.2.0):
-    resolution: {integrity: sha512-pEy4eKWXV9IW/h76dzEPRDJdPyYGis4OoJC1BYHjDRILq0kV1F/lzCJaL29f5VHkYOTIHmwaEMbDX3m7OSJjrw==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
-    dependencies:
-      '@react-types/overlays': 3.8.2(react@18.2.0)
       '@react-types/shared': 3.20.0(react@18.2.0)
       react: 18.2.0
     dev: false

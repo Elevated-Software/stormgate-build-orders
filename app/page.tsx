@@ -1,7 +1,5 @@
 import NextLink from 'next/link';
 import { Link } from '@nextui-org/link';
-import { Snippet } from '@nextui-org/snippet';
-import { Code } from '@nextui-org/code';
 import { button as buttonStyles } from '@nextui-org/theme';
 import { siteConfig } from '@/config/site';
 import { title, subtitle } from '@/components/primitives';
@@ -10,8 +8,8 @@ import { Card, CardBody } from '@nextui-org/card';
 
 export default function Home() {
   return (
-    <section className="flex gap-4 py-8 md:py-10">
-      <div className="flex flex-col items-center justify-center h-full w-1/2">
+    <section className="flex flex-col md:flex-row gap-4 py-8 md:py-10">
+      <div className="flex flex-col items-center justify-center h-full md:w-1/2">
         <div className="inline-block items-start">
           <h2
             className={subtitle({
@@ -48,34 +46,27 @@ export default function Home() {
               &nbsp;Cook you a nice romantic dinner
             </div>
           </div>
-          <div className="flex gap-3 mt-6">
+          <div className="flex gap-6 mt-6">
             <Link
-              isExternal
               as={NextLink}
               href={siteConfig.links.docs}
               className={buttonStyles({
                 color: 'primary',
-                radius: 'full',
+                radius: 'md',
                 variant: 'shadow',
               })}>
-              Documentation
+              Build Orders
             </Link>
             <Link
-              isExternal
               as={NextLink}
-              className={buttonStyles({ variant: 'bordered', radius: 'full' })}
+              className={buttonStyles({
+                color: 'success',
+                variant: 'bordered',
+                radius: 'full',
+              })}
               href={siteConfig.links.github}>
-              <GithubIcon size={20} />
-              GitHub
+              Sign In
             </Link>
-          </div>
-
-          <div className="mt-8">
-            <Snippet hideSymbol hideCopyButton variant="flat">
-              <span>
-                Get started by editing <Code color="primary">app/page.tsx</Code>
-              </span>
-            </Snippet>
           </div>
         </div>
       </div>
