@@ -6,9 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate": "drizzle-kit generate:pg",
+    "migrate": "tsx ./db/migrate.ts"
   },
   "dependencies": {
+    "@neondatabase/serverless": "^0.6.0",
     "@nextui-org/button": "2.0.18",
     "@nextui-org/card": "^2.0.20",
     "@nextui-org/input": "2.1.6",
@@ -25,17 +28,25 @@
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.15",
     "clsx": "^2.0.0",
+    "dotenv": "^16.3.1",
+    "drizzle-orm": "^0.28.6",
     "eslint": "8.48.0",
     "eslint-config-next": "13.4.19",
     "framer-motion": "^10.16.2",
     "intl-messageformat": "^10.5.0",
     "next": "13.4.19",
+    "next-auth": "^4.23.0",
     "next-themes": "^0.2.1",
     "postcss": "8.4.29",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "tailwind-variants": "^0.1.13",
-    "tailwindcss": "3.3.3",
-    "typescript": "5.0.4"
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.19.13",
+    "postgres": "^3.3.5",
+    "tsx": "^3.12.10"
   }
 }
