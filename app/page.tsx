@@ -5,6 +5,7 @@ import { siteConfig } from '@/config/site';
 import { title, subtitle } from '@/components/primitives';
 import { CheckCircleIcon, GithubIcon, XCircleIcon } from '@/components/icons';
 import { Card, CardBody } from '@nextui-org/card';
+import AuthButton from '@/components/AuthButton';
 
 export default function Home() {
   return (
@@ -57,16 +58,7 @@ export default function Home() {
               })}>
               Build Orders
             </Link>
-            <Link
-              as={NextLink}
-              className={buttonStyles({
-                color: 'success',
-                variant: 'bordered',
-                radius: 'full',
-              })}
-              href={siteConfig.links.github}>
-              Sign In
-            </Link>
+            <AuthButton color="success" variant="bordered" radius="full" />
           </div>
         </div>
       </div>
