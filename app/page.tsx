@@ -47,18 +47,18 @@ export default function Home() {
               &nbsp;Cook you a nice romantic dinner
             </div>
           </div>
-          <div className="flex gap-6 mt-6">
+          <div className="flex mt-6">
             <Link
               as={NextLink}
-              href={siteConfig.links.docs}
+              href={siteConfig.buildOrders.href}
               className={buttonStyles({
                 color: 'primary',
                 radius: 'md',
                 variant: 'shadow',
+                size: 'lg',
               })}>
               Build Orders
             </Link>
-            <AuthButton color="success" variant="bordered" radius="full" />
           </div>
         </div>
       </div>

@@ -61,14 +61,7 @@ export const Navbar = () => {
             <p className="font-bold text-inherit">Stormgate Build Orders</p>
           </NextLink>
         </NavbarBrand>
-        <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
-      </NavbarContent>
-
-      <NavbarContent
-        className="hidden sm:flex basis-1/5 sm:basis-full"
-        justify="end">
         <ul className="hidden lg:flex gap-4 justify-start ml-2">
-          <ThemeSwitch />
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
               <NextLink
@@ -83,7 +76,17 @@ export const Navbar = () => {
             </NavbarItem>
           ))}
         </ul>
-        <AuthButton color="primary" />
+      </NavbarContent>
+
+      <NavbarContent
+        className="hidden sm:flex basis-1/5 sm:basis-full"
+        justify="end">
+        <ThemeSwitch />
+        <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
+        <AuthButton
+          className="border-blue-300 text-blue-300"
+          variant="bordered"
+        />
         {/* <NavbarItem className="hidden sm:flex gap-2"> */}
         {/*   <Link isExternal href={siteConfig.links.twitter} aria-label="Twitter"> */}
         {/*     <TwitterIcon className="text-default-500" /> */}
