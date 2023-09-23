@@ -44,14 +44,25 @@ export default function RootLayout({
               {children}
             </main>
             <footer className="w-full flex items-center justify-center py-3">
-              <Link
-                isExternal
-                className="flex items-center gap-1 text-current"
-                href="https://nextui-docs-v2.vercel.app?utm_source=next-app-template"
-                title="nextui.org homepage">
-                <span className="text-default-600">Powered by</span>
-                <p className="text-primary">NextUI</p>
-              </Link>
+              <div className="text-default-600 px-4">
+                Stormgate Build Orders is a fan-made website and not affiliated
+                with{' '}
+                <Link
+                  isExternal
+                  className="text-current"
+                  href="http://playstormgate.com"
+                  title="Stormgate Build Orders is a fan-made website">
+                  <span>Stormgate</span>
+                </Link>{' '}
+                or{' '}
+                <Link
+                  isExternal
+                  className="text-current"
+                  href="https://frostgiant.com/"
+                  title="Stormgate Build Orders is a fan-made website">
+                  Frost Giant Studios.
+                </Link>
+              </div>
             </footer>
           </div>
         </Providers>

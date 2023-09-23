@@ -3,9 +3,8 @@ import { Link } from '@nextui-org/link';
 import { button as buttonStyles } from '@nextui-org/theme';
 import { siteConfig } from '@/config/site';
 import { title, subtitle } from '@/components/primitives';
-import { CheckCircleIcon, GithubIcon, XCircleIcon } from '@/components/icons';
+import { CheckCircleIcon, XCircleIcon } from '@/components/icons';
 import { Card, CardBody } from '@nextui-org/card';
-import AuthButton from '@/components/AuthButton';
 
 export default function Home() {
   return (
