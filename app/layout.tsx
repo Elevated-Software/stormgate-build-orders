@@ -40,16 +40,16 @@ export default function RootLayout({
         <Providers themeProps={{ attribute: 'class', defaultTheme: 'dark' }}>
           <div className="relative flex flex-col h-screen">
             <Navbar />
-            <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
+            <main className="container mx-auto max-w-7xl md:pt-16 px-2 md:px-6 flex-grow">
               {children}
             </main>
-            <footer className="w-full flex items-center justify-center py-3">
+            <footer className="w-full flex items-center justify-center py-3 text-xs md:text-sm">
               <div className="text-default-600 px-4">
                 Stormgate Build Orders is a fan-made website and not affiliated
                 with{' '}
                 <Link
                   isExternal
-                  className="text-current"
+                  className="text-current text-xs md:text-sm"
                   href="http://playstormgate.com"
                   title="Stormgate Build Orders is a fan-made website">
                   <span>Stormgate</span>
@@ -57,7 +57,7 @@ export default function RootLayout({
                 or{' '}
                 <Link
                   isExternal
-                  className="text-current"
+                  className="text-current text-xs md:text-sm"
                   href="https://frostgiant.com/"
                   title="Stormgate Build Orders is a fan-made website">
                   Frost Giant Studios.

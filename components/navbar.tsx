@@ -19,16 +19,11 @@ import NextLink from 'next/link';
 import clsx from 'clsx';
 
 import { ThemeSwitch } from '@/components/theme-switch';
-import {
-  TwitterIcon,
-  GithubIcon,
-  DiscordIcon,
-  HeartFilledIcon,
-  SearchIcon,
-} from '@/components/icons';
+import { GithubIcon, HeartFilledIcon, SearchIcon } from '@/components/icons';
 
 import { Logo } from '@/components/icons';
 import AuthButton from './AuthButton';
+import { Divider } from '@nextui-org/divider';
 
 export const Navbar = () => {
   const searchInput = (
@@ -61,7 +56,7 @@ export const Navbar = () => {
             <p className="font-bold text-inherit">Stormgate Build Orders</p>
           </NextLink>
         </NavbarBrand>
-        <ul className="hidden lg:flex gap-4 justify-start ml-2">
+        <ul className="hidden md:flex gap-4 justify-start ml-2">
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
               <NextLink
@@ -79,12 +74,12 @@ export const Navbar = () => {
       </NavbarContent>
 
       <NavbarContent
-        className="hidden sm:flex basis-1/5 sm:basis-full"
+        className="hidden md:flex basis-1/5 sm:basis-full"
         justify="end">
         <ThemeSwitch />
-        <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
+        <NavbarItem className="hidden md:flex">{searchInput}</NavbarItem>
         <AuthButton
-          className="border-blue-300 text-blue-300"
+          className="border-blue-300 text-blue-300 hidden md:flex"
           variant="bordered"
         />
         {/* <NavbarItem className="hidden sm:flex gap-2"> */}
@@ -111,10 +106,7 @@ export const Navbar = () => {
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-        <Link isExternal href={siteConfig.links.github} aria-label="Github">
-          <GithubIcon className="text-default-500" />
-        </Link>
+      <NavbarContent className="md:hidden basis-1 pl-4" justify="end">
         <ThemeSwitch />
         <NavbarMenuToggle />
       </NavbarContent>
@@ -122,22 +114,29 @@ export const Navbar = () => {
       <NavbarMenu>
         {searchInput}
         <div className="mx-4 mt-2 flex flex-col gap-2">
-          {siteConfig.navMenuItems.map((item, index) => (
+          {siteConfig.navItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
-              <Link
-                color={
-                  index === 2
-                    ? 'primary'
-                    : index === siteConfig.navMenuItems.length - 1
-                    ? 'danger'
-                    : 'foreground'
-                }
-                href="#"
-                size="lg">
+              <Link className="text-current" href={item.href} size="lg">
                 {item.label}
               </Link>
             </NavbarMenuItem>
           ))}
+          <NavbarMenuItem>
+            <Button
+              isExternal
+              as={Link}
+              className="text-sm font-normal text-default-600 bg-default-100"
+              href={siteConfig.links.sponsor}
+              startContent={<HeartFilledIcon className="text-danger" />}
+              variant="flat">
+              Sponsor
+            </Button>
+          </NavbarMenuItem>
+          <Divider className="my-2" />
+          <AuthButton
+            className="border-blue-300 text-blue-300"
+            variant="bordered"
+          />
         </div>
       </NavbarMenu>
     </NextUINavbar>

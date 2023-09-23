@@ -8,7 +8,7 @@ import { Card, CardBody } from '@nextui-org/card';
 
 export default function Home() {
   return (
-    <section className="flex flex-col md:flex-row gap-4 py-8 md:py-10">
+    <section className="flex flex-col md:flex-row gap-10 md:gap-4 py-4 md:py-10">
       <div className="flex flex-col items-center justify-center h-full md:w-1/2">
         <div className="inline-block items-start">
           <h2
@@ -46,7 +46,7 @@ export default function Home() {
               &nbsp;Cook you a nice romantic dinner
             </div>
           </div>
-          <div className="flex mt-6">
+          <div className="flex mt-6 justify-center md:justify-start">
             <Link
               as={NextLink}
               href={siteConfig.buildOrders.href}
