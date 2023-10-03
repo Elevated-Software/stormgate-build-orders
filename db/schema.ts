@@ -4,8 +4,13 @@ import {
   text,
   primaryKey,
   integer,
+  pgEnum,
+  uuid,
+  smallint,
+  serial,
 } from 'drizzle-orm/pg-core';
 import { AdapterAccount } from 'next-auth/adapters';
+import { RACES, TAGS, VERSIONS } from './enums';
 
 export const users = pgTable('user', {
   id: text('id').notNull().primaryKey(),
@@ -56,3 +61,42 @@ export const verificationTokens = pgTable(
     compoundKey: primaryKey(vt.identifier, vt.token),
   })
 );
+
+const tags = Object.keys(TAGS) as unknown as readonly [string, ...string[]];
+export const tagEnum = pgEnum('tag', tags);
+
+const versions = Object.keys(VERSIONS) as unknown as readonly [
+  string,
+  ...string[]
+];
+export const versionEnum = pgEnum('version', versions);
+
+const races = Object.keys(RACES) as unknown as readonly [string, ...string[]];
+export const raceEnum = pgEnum('race', races);
+
+export const buildOrders = pgTable('buildOrder', {
+  id: uuid('id').primaryKey().notNull(),
+  userId: text('userId')
+    .notNull()
+    .references(() => users.id, { onDelete: 'cascade' }),
+  name: text('name').notNull(),
+  description: text('description'),
+  tags: tagEnum('tags').array(),
+  race: raceEnum('race'),
+  youtube: text('youtube'),
+  version: versionEnum('version'),
+  createdAt: timestamp('createdAt').notNull().defaultNow(),
+  updatedAt: timestamp('updatedAt').notNull().defaultNow(),
+});
+
+export const buildOrderSteps = pgTable('buildOrderStep', {
+  id: uuid('id').primaryKey().notNull(),
+  buildOrderId: uuid('buildOrderId')
+    .notNull()
+    .references(() => buildOrders.id, { onDelete: 'cascade' }),
+  gameTime: text('gameTime'),
+  food: smallint('food'),
+  description: text('description').notNull(),
+  createdAt: timestamp('createdAt').notNull().defaultNow(),
+  updatedAt: timestamp('updatedAt').notNull().defaultNow(),
+});

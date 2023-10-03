@@ -1,7 +1,7 @@
 {
   "version": "5",
   "dialect": "pg",
-  "id": "c2a0d425-8592-40e0-9bff-2408efdfee9d",
+  "id": "77dd746f-f6a0-4f11-84ec-fdc3785b7630",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "account": {
@@ -100,6 +100,160 @@
           ]
         }
       },
+      "uniqueConstraints": {}
+    },
+    "buildOrderStep": {
+      "name": "buildOrderStep",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "buildOrderId": {
+          "name": "buildOrderId",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "gameTime": {
+          "name": "gameTime",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "food": {
+          "name": "food",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "description": {
+          "name": "description",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "createdAt": {
+          "name": "createdAt",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "updatedAt": {
+          "name": "updatedAt",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "buildOrderStep_buildOrderId_buildOrder_id_fk": {
+          "name": "buildOrderStep_buildOrderId_buildOrder_id_fk",
+          "tableFrom": "buildOrderStep",
+          "tableTo": "buildOrder",
+          "columnsFrom": [
+            "buildOrderId"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "buildOrder": {
+      "name": "buildOrder",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "userId": {
+          "name": "userId",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "description": {
+          "name": "description",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "tags": {
+          "name": "tags",
+          "type": "tag[]",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "race": {
+          "name": "race",
+          "type": "race",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "youtube": {
+          "name": "youtube",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "version": {
+          "name": "version",
+          "type": "version",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "createdAt": {
+          "name": "createdAt",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "updatedAt": {
+          "name": "updatedAt",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "buildOrder_userId_user_id_fk": {
+          "name": "buildOrder_userId_user_id_fk",
+          "tableFrom": "buildOrder",
+          "tableTo": "user",
+          "columnsFrom": [
+            "userId"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
       "uniqueConstraints": {}
     },
     "session": {
@@ -221,7 +375,30 @@
       "uniqueConstraints": {}
     }
   },
-  "enums": {},
+  "enums": {
+    "race": {
+      "name": "race",
+      "values": {
+        "human-resistance": "human-resistance",
+        "infernal-host": "infernal-host"
+      }
+    },
+    "tag": {
+      "name": "tag",
+      "values": {
+        "rush": "rush",
+        "cheese": "cheese",
+        "all-in": "all-in"
+      }
+    },
+    "version": {
+      "name": "version",
+      "values": {
+        "closed-alpha-1": "closed-alpha-1",
+        "closed-alpha-2": "closed-alpha-2"
+      }
+    }
+  },
   "schemas": {},
   "_meta": {
     "schemas": {},
