@@ -7,7 +7,6 @@ import {
   pgEnum,
   uuid,
   smallint,
-  serial,
 } from 'drizzle-orm/pg-core';
 import { AdapterAccount } from 'next-auth/adapters';
 import { RACES, TAGS, VERSIONS } from './enums';
