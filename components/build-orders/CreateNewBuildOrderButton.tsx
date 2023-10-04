@@ -1,13 +1,24 @@
 'use client';
 
-import { Button } from '@nextui-org/button';
 import React from 'react';
+import NextLink from 'next/link';
+import { Link } from '@nextui-org/link';
+import { button as buttonStyles } from '@nextui-org/theme';
+import { siteConfig } from '@/config/site';
 
 function CreateNewBuildOrderButton() {
   return (
-    <Button variant="shadow" color="success" className="font-semibold">
+    <Link
+      as={NextLink}
+      href={siteConfig.newBuildOrder.href}
+      className={buttonStyles({
+        color: 'success',
+        radius: 'md',
+        variant: 'shadow',
+        className: 'font-semibold',
+      })}>
       Create New Build Order
-    </Button>
+    </Link>
   );
 }
 

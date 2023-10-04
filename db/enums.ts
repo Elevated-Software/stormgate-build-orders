@@ -14,8 +14,8 @@ export const VERSIONS = {
 export type Version = keyof typeof VERSIONS;
 
 export const RACES = {
-  'human-resistance': 'Human Resistance',
-  'infernal-host': 'Infernal Host',
+  vanguard: 'Vanguard',
+  infernals: 'Infernals',
 } as const;
 
 export type Race = keyof typeof RACES;
